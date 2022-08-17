@@ -1,0 +1,32 @@
+/*style banner*/
+header{
+    display: flex !important;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    align-items: center;
+justify-content: space-between;
+background-color: white;
+
+
+}
+header img{
+    background-color:#3dcd58;
+    padding: 10px;
+    border-radius: 0px 5px 0px 5px;
+}
+.menu{
+    list-style: none;
+}
+.menu a{
+text-decoration: none;
+color: gray;
+padding: 0 10px;
+}
+.menu li{
+    display: inline-block;
+   padding-right: 20px;
+}
+.menu a:hover{
+    color: #00ccb1;
+}
