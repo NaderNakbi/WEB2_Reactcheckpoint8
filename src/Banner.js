@@ -4,7 +4,7 @@ import "./Banner.css";
 function Banner(props) {
   const [query, setquery] = useState("");
   //const test=props.data;
-  console.log(props.data.setmovie);
+  //console.log(props.data.setmovie);
   //console.log(test);
   const Changecolor = (e) => {
     const tab = ["gray", "gray", "gray", "gray", "gray"];
@@ -15,15 +15,20 @@ function Banner(props) {
       document.getElementById(i).style.color = tab[i];
     }
   };
-  const test=props.data.filter((a)=>a.name.toLowerCase().includes(query)
   
-    )
+ 
     
-    console.log(test)
-    const filter = (e) =>{
-       setquery(e.target.value)
+    const Search = () =>{
+     
+      console.log(query);
 
-    
+     var filtre=props.movies1.filter((user)=>user.name.toLowerCase().includes(query));
+     
+
+      console.log(props.movies1)
+      console.log(filtre)
+      console.log(props.setMovie1(filtre))
+      
     }
   return (
     <header>
@@ -49,11 +54,13 @@ function Banner(props) {
           <i onClick={Changecolor} id="4" class="fa-solid fa-star"></i>
         </div>
         <input type="text" placeholder="Search..." className="search" 
-        onChange={filter}
+      onChange={(e)=>setquery(e.target.value)}
         />
-        {/* <button onClick={()=>{props.func(test)}}>click</button> */}
+        
+         <button onClick={Search}>click</button> 
+         
       </ul>
-     
+    
       
       
       

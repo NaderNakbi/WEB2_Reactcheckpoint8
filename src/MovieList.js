@@ -25,7 +25,7 @@ const namemovie=useRef()
 return (
     <div >
       
-        <Banner data={movies} func={setMovie}></Banner>
+        <Banner movies1={movies} setMovie1={setMovie}></Banner>
       {movies.map((e) => (
         <Item name={e.name} image={e.image} rate={e.rate}></Item>
       ))}
